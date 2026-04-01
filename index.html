@@ -1,185 +1,160 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enciclopedia Equina Avanzada | VIBRAS POSITIVAS HM</title>
+    <title>EquinoPro | La Enciclopedia Definitiva - VIBRAS POSITIVAS HM</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f5f3f0; }
+        :root { --brand-gold: #c5a059; --brand-dark: #1a1512; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #faf9f6; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .hero-bg {
-            /* Imagen de fondo de establo/picadero para mayor inmersión */
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1598974357851-7274099f71c0?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
-        .card-expand:hover .card-content { max-height: 500px; opacity: 1; }
-        .card-content { max-height: 0; opacity: 0; overflow: hidden; transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; }
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .hero-video-overlay { background: linear-gradient(to bottom, rgba(26,21,18,0.4) 0%, rgba(26,21,18,0.9) 100%); }
+        .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     </style>
 </head>
-<body class="text-stone-900">
+<body class="antialiased">
 
-    <header class="bg-[#3e2e21] text-white p-4 sticky top-0 z-50 shadow-2xl">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="bg-white p-2 rounded-full shadow-inner">
-                    <span class="text-[#3e2e21] font-bold text-sm">VP HM</span>
-                </div>
-                <h1 class="text-3xl font-bold tracking-widest">ENCICLOPEDIA EQUINA</h1>
-            </div>
-            <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase">
-                <a href="#" class="hover:text-amber-400 transition">Razas</a>
-                <a href="#" class="hover:text-amber-400 transition">Anatomía</a>
-                <a href="#" class="hover:text-amber-400 transition">Cuidados</a>
-                <a href="#" class="hover:text-amber-400 transition">Etología</a>
-                <a href="#" class="hover:text-amber-400 transition">Medicina</a>
-            </nav>
+    <nav class="fixed w-full z-[100] glass px-6 py-4 flex justify-between items-center shadow-sm">
+        <div class="flex items-center gap-3">
+            <div class="bg-amber-900 text-white w-10 h-10 flex items-center justify-center rounded-lg font-bold">VP</div>
+            <span class="font-bold tracking-tighter text-xl text-stone-900 uppercase">Vibras Positivas <span class="text-amber-700 font-extrabold italic text-sm">HM</span></span>
         </div>
-    </header>
+        <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-stone-600">
+            <a href="#enciclopedia" class="hover:text-amber-700 transition">Biblioteca</a>
+            <a href="#servicios" class="hover:text-amber-700 transition">Servicios</a>
+            <a href="#contacto" class="hover:text-amber-700 transition">Contacto</a>
+        </div>
+        <a href="https://wa.me/573117700431" class="bg-amber-900 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-amber-800 transition shadow-lg">CONSULTAR</a>
+    </nav>
 
-    <section class="hero-bg h-[50vh] flex items-center justify-center text-white text-center px-4 shadow-inner">
-        <div>
-            <h2 class="text-6xl md:text-8xl mb-4 leading-tight">Mundo Equino</h2>
-            <p class="text-2xl max-w-3xl mx-auto mb-10 font-light italic">"Un conocimiento profundo para un bienestar superior."</p>
-            <div class="max-w-2xl mx-auto relative">
-                <input type="text" placeholder="Busca con lupa: capas, biomecánica, cólico..." 
-                       class="w-full p-6 rounded-full border-none text-stone-800 shadow-2xl focus:ring-4 focus:ring-amber-600 outline-none text-lg">
-                <button class="absolute right-6 top-5 bg-amber-700 p-3 rounded-full hover:bg-amber-800 transition shadow-lg">
-                    🔍
-                </button>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=2000" class="absolute w-full h-full object-cover" alt="Caballo pura sangre">
+        <div class="absolute inset-0 hero-video-overlay"></div>
+        <div class="relative z-10 text-center px-4 max-w-5xl">
+            <span class="text-amber-400 font-bold tracking-[0.5em] uppercase text-sm mb-4 block">Pasión, Ciencia y Tradición</span>
+            <h1 class="text-white text-6xl md:text-8xl font-bold mb-6 leading-tight">La Lupa sobre el <br><span class="italic text-amber-500">Mundo Equino</span></h1>
+            <p class="text-stone-300 text-xl md:text-2xl mb-10 font-light max-w-2xl mx-auto">Explora la enciclopedia digital más completa, diseñada por **Vibras Positivas HM** para el profesional del campo.</p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#enciclopedia" class="bg-white text-stone-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-amber-100 transition shadow-2xl">Empezar a Explorar</a>
+                <a href="#servicios" class="border border-white/30 backdrop-blur-md text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition">Nuestros Servicios</a>
             </div>
         </div>
     </section>
 
-    <main class="container mx-auto py-16 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl transition duration-300 card-expand border border-stone-100">
-                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=2000&auto=format&fit=crop" alt="Caballo Tordo" class="h-64 w-full object-cover">
-                <div class="p-8 border-t-[10px] border-amber-900">
-                    <h3 class="text-3xl font-bold mb-4 text-amber-950 leading-tight">Genética y Capas</h3>
-                    <p class="text-stone-700 mb-6 text-base leading-relaxed">Más allá del color: el estudio del ADN que define la identidad visual del caballo.</p>
-                    <div class="card-content">
-                        <h4 class="font-semibold text-lg text-amber-900 mb-2">Puntos Clave con Lupa:</h4>
-                        <ul class="list-disc list-inside text-stone-600 text-sm space-y-2 mb-4">
-                            <li><strong>Genes de Dilución:</strong> Cream (Palomino), Dun (Bayo), Champagne.</li>
-                            <li><strong>Patrones de CapaCompleja:</strong> Appaloosa (Leopardo, Barniz), Pinto (Overo, Tobiano).</li>
-                            <li><strong>Marcas y Señas:</strong> Luceros, cordones, calces. Su importancia clínica e identificativa.</li>
-                            <li><strong>Genética de Enfermedades:</strong> Síndrome de Letal Blanco, PSSM.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="inline-block bg-amber-900 text-white font-bold px-6 py-2 rounded-full hover:bg-amber-950 text-sm">Ver estudio completo con lupa →</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl transition duration-300 card-expand border border-stone-100">
-                <img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?q=80&w=2000&auto=format&fit=crop" alt=" Veterinario examinando casco" class="h-64 w-full object-cover">
-                <div class="p-8 border-t-[10px] border-emerald-800">
-                    <h3 class="text-3xl font-bold mb-4 text-emerald-950 leading-tight">Salud Preventiva</h3>
-                    <p class="text-stone-700 mb-6 text-base leading-relaxed">La base del bienestar. Gestión sanitaria integral y manejo nutricional.</p>
-                    <div class="card-content">
-                        <h4 class="font-semibold text-lg text-emerald-900 mb-2">Puntos Clave con Lupa:</h4>
-                        <ul class="list-disc list-inside text-stone-600 text-sm space-y-2 mb-4">
-                            <li><strong>Podología y Herraje:</strong> Balance Fisiológico del casco. Anatomía del pie (ranilla, muralla).</li>
-                            <li><strong>Calendarios de Vacunación:</strong> Tétanos, Influenza, EHV.</li>
-                            <li><strong>Nutrición Avanzada:</strong> Relación forraje-concentrado. Cálculo de raciones para deporte/trabajo.</li>
-                            <li><strong>Manejo de Cólicos:</strong> Prevención, identificación temprana y primeros auxilios.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="inline-block bg-emerald-800 text-white font-bold px-6 py-2 rounded-full hover:bg-emerald-950 text-sm">Guía clínica completa →</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl transition duration-300 card-expand border border-stone-100">
-                <img src="https://images.unsplash.com/photo-1599839619124-b152345e54d6?q=80&w=2000&auto=format&fit=crop" alt="Caballo de salto en acción" class="h-64 w-full object-cover">
-                <div class="p-8 border-t-[10px] border-blue-900">
-                    <h3 class="text-3xl font-bold mb-4 text-blue-950 leading-tight">Disciplinas y Aires</h3>
-                    <p class="text-stone-700 mb-6 text-base leading-relaxed">Análisis biomecánico del movimiento y las diferentes expresiones deportivas.</p>
-                    <div class="card-content">
-                        <h4 class="font-semibold text-lg text-blue-900 mb-2">Puntos Clave con Lupa:</h4>
-                        <ul class="list-disc list-inside text-stone-600 text-sm space-y-2 mb-4">
-                            <li><strong>Biomecánica del Movimiento:</strong> Análisis del Paso (4 tiempos), Trote (2 tiempos), Galope (3 tiempos).</li>
-                            <li><strong>Aires Especiales:</strong> **Paso Fino**, Paso Criollo, Marchador. Sus 4 andares.</li>
-                            <li><strong>Doma y Equitación:</strong> La escala de entrenamiento (ritmo, soltura, contacto).</li>
-                            <li><strong>Salto Ecuestre:</strong> Mecánica del salto. Tipos de obstáculos y técnicas de monta.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="inline-block bg-blue-900 text-white font-bold px-6 py-2 rounded-full hover:bg-blue-950 text-sm">Explora las disciplinas →</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl transition duration-300 card-expand border border-stone-100">
-                <img src="https://images.unsplash.com/photo-1594911771120-d33a1e9c20a6?q=80&w=2000&auto=format&fit=crop" alt="Diagrama muscular" class="h-64 w-full object-cover">
-                <div class="p-8 border-t-[10px] border-red-900">
-                    <h3 class="text-3xl font-bold mb-4 text-red-950 leading-tight">Anatomía</h3>
-                    <p class="text-stone-700 mb-6 text-base leading-relaxed">Conoce la máquina. Gráficos interactivos y fisiología comparada.</p>
-                    <div class="card-content">
-                        <h4 class="font-semibold text-lg text-red-900 mb-2">Puntos Clave con Lupa:</h4>
-                        <ul class="list-disc list-inside text-stone-600 text-sm space-y-2 mb-4">
-                            <li><strong>Sistema Óseo:</strong> El esqueleto equino, articulaciones clave (corvejón, menudillo).</li>
-                            <li><strong>Sistema Muscular:</strong> Principales grupos musculares para el movimiento.</li>
-                            <li><strong>Fisiología Respiratoria:</strong> Cómo funciona el pulmón en esfuerzo.</li>
-                            <li><strong>Anatomía del Sistema Digestivo:</strong> La particularidad del estómago y ciego.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="inline-block bg-red-900 text-white font-bold px-6 py-2 rounded-full hover:bg-red-950 text-sm">Mapa anatómico interactivo →</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl transition duration-300 card-expand border border-stone-100">
-                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2000&auto=format&fit=crop" alt="Dos caballos en libertad" class="h-64 w-full object-cover">
-                <div class="p-8 border-t-[10px] border-purple-900">
-                    <h3 class="text-3xl font-bold mb-4 text-purple-950 leading-tight">Etología Equina</h3>
-                    <p class="text-stone-700 mb-6 text-base leading-relaxed">Aprende su lenguaje. La psicología del caballo aplicada al manejo.</p>
-                    <div class="card-content">
-                        <h4 class="font-semibold text-lg text-purple-900 mb-2">Puntos Clave con Lupa:</h4>
-                        <ul class="list-disc list-inside text-stone-600 text-sm space-y-2 mb-4">
-                            <li><strong>Lenguaje Corporal:</strong> Interpretación de orejas, cola y postura.</li>
-                            <li><strong>Estructura Social:</strong> La manada, el orden de dominancia.</li>
-                            <li><strong>Instintos Básicos:</strong> Presa vs. Depredador. La respuesta de huida.</li>
-                            <li><strong>Manejo Natural:</strong> Técnicas de comunicación etológica.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="inline-block bg-purple-900 text-white font-bold px-6 py-2 rounded-full hover:bg-purple-950 text-sm">Aprende su lenguaje →</a>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl transition duration-300 card-expand border border-stone-100">
-                <img src="https://images.unsplash.com/photo-1582211516709-66175e11e031?q=80&w=2000&auto=format&fit=crop" alt="Mano de veterinario en caballo" class="h-64 w-full object-cover">
-                <div class="p-8 border-t-[10px] border-stone-800">
-                    <h3 class="text-3xl font-bold mb-4 text-stone-950 leading-tight">Medicina Equina</h3>
-                    <p class="text-stone-700 mb-6 text-base leading-relaxed">Guía clínica para propietarios. Diagnóstico y actuación rápida.</p>
-                    <div class="card-content">
-                        <h4 class="font-semibold text-lg text-stone-900 mb-2">Puntos Clave con Lupa:</h4>
-                        <ul class="list-disc list-inside text-stone-600 text-sm space-y-2 mb-4">
-                            <li><strong>Examen Clínico Básico:</strong> Signos vitales (pulso, temperatura, respiración).</li>
-                            <li><strong>Principales Patologías:</strong> Laminitis, piroplasmosis, enfermedades respiratorias.</li>
-                            <li><strong>Primeros Auxilios:</strong> Manejo de heridas, hemorragias y trauma.</li>
-                            <li><strong>Medicina Deportiva:</strong> Prevención de lesiones y optimización del rendimiento.</li>
-                        </ul>
-                    </div>
-                    <a href="#" class="inline-block bg-stone-900 text-white font-bold px-6 py-2 rounded-full hover:bg-stone-950 text-sm">Biblioteca médica →</a>
-                </div>
-            </div>
-
+    <section id="enciclopedia" class="py-24 px-6 container mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4">Biblioteca Especializada</h2>
+            <div class="w-24 h-1 bg-amber-700 mx-auto mb-6"></div>
+            <p class="text-stone-500 max-w-xl mx-auto">Análisis técnico profundo extraído con el rigor de la experiencia ecuestre.</p>
         </div>
-    </main>
 
-    <footer class="bg-stone-950 text-stone-400 py-16 mt-16 border-t-[15px] border-amber-900">
-        <div class="container mx-auto text-center px-6 grid md:grid-cols-3 gap-10">
-            <div>
-                <p class="text-white text-3xl font-bold tracking-widest mb-3">VIBRAS POSITIVAS HM</p>
-                <p class="text-xs uppercase italic tracking-widest text-stone-500">Desarrollo Tecnológico Agropecuario</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="bg-white rounded-[2rem] overflow-hidden hover-lift border border-stone-100 group">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1598974357851-7274099f71c0?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Detalle ojo de caballo">
+                </div>
+                <div class="p-10">
+                    <h3 class="text-2xl font-bold mb-4 text-stone-800">Genética y Capas</h3>
+                    <p class="text-stone-600 mb-6 leading-relaxed">Estudio de ADN, genes de dilución y clasificación internacional de pelajes. La ciencia detrás de la estética.</p>
+                    <ul class="text-sm text-stone-500 space-y-2 mb-8">
+                        <li class="flex items-center gap-2">🔍 Genes Cream, Dun y Champagne</li>
+                        <li class="flex items-center gap-2">🔍 Patrones Appaloosa y Pintos</li>
+                    </ul>
+                    <button class="w-full py-4 border-2 border-stone-900 font-bold rounded-xl hover:bg-stone-900 hover:text-white transition">LEER ESTUDIO</button>
+                </div>
             </div>
-            <div class="space-y-2">
-                <p class="text-stone-200">Líderes en Enciclopedias Digitales</p>
-                <p class="text-sm">Expertos en extraer conocimiento equino.</p>
+
+            <div class="bg-stone-900 text-white rounded-[2rem] overflow-hidden hover-lift shadow-2xl relative">
+                <div class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Vital</div>
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover opacity-80" alt="Veterinaria equina">
+                </div>
+                <div class="p-10">
+                    <h3 class="text-2xl font-bold mb-4">Salud y Podología</h3>
+                    <p class="text-stone-400 mb-6 leading-relaxed">El bienestar empieza en los cascos. Guías de balance fisiológico, nutrición clínica y primeros auxilios.</p>
+                    <ul class="text-sm text-stone-400 space-y-2 mb-8">
+                        <li class="flex items-center gap-2 text-amber-500 font-bold italic">Protocolo Anti-Cólico HM</li>
+                        <li class="flex items-center gap-2">✔ Herraje de Alto Rendimiento</li>
+                    </ul>
+                    <button class="w-full py-4 bg-amber-700 font-bold rounded-xl hover:bg-amber-600 transition shadow-lg shadow-amber-900/50">GUÍA MÉDICA</button>
+                </div>
             </div>
-            <div class="border-t border-stone-800 pt-6 md:border-none md:pt-0">
-                <p class="text-sm">Derechos de Autor © 2026 | Contacto: 3117700431</p>
-                <p class="text-xs mt-3 text-stone-600">Basado en tarifas de Tintorillo Pro</p>
+
+            <div class="bg-white rounded-[2rem] overflow-hidden hover-lift border border-stone-100 group">
+                <div class="h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1599839619124-b152345e54d6?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition duration-700" alt="Caballo de salto">
+                </div>
+                <div class="p-10">
+                    <h3 class="text-2xl font-bold mb-4 text-stone-800">Aires y Disciplinas</h3>
+                    <p class="text-stone-600 mb-6 leading-relaxed">Biomecánica del movimiento. Desde la elegancia del Paso Fino hasta la potencia del Salto.</p>
+                    <ul class="text-sm text-stone-500 space-y-2 mb-8">
+                        <li class="flex items-center gap-2">🔍 Los 4 andares del Paso Fino</li>
+                        <li class="flex items-center gap-2">🔍 Doma Clásica y Vaquera</li>
+                    </ul>
+                    <button class="w-full py-4 border-2 border-stone-900 font-bold rounded-xl hover:bg-stone-900 hover:text-white transition">EXPLORAR AIRES</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="bg-amber-50 py-24 px-6 border-y border-amber-200">
+        <div class="container mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="flex-1">
+                <h2 class="text-5xl font-bold text-stone-900 mb-8 leading-tight">¿Necesitas una Solución Tecnológica <br><span class="text-amber-800">para tu Pesebrera?</span></h2>
+                <p class="text-stone-700 text-lg mb-8 leading-relaxed italic">Desarrollamos aplicaciones a medida para el control de inventarios, registros genealógicos y gestión de salud equina. Todo con el respaldo de <strong>VIBRAS POSITIVAS HM</strong>.</p>
+                <div class="grid grid-cols-2 gap-6 mb-10">
+                    <div class="border-l-4 border-amber-800 pl-4">
+                        <h4 class="font-bold text-2xl text-stone-900">100%</h4>
+                        <p class="text-sm text-stone-500 uppercase font-bold tracking-tighter">Hecho a Medida</p>
+                    </div>
+                    <div class="border-l-4 border-amber-800 pl-4">
+                        <h4 class="font-bold text-2xl text-stone-900">24/7</h4>
+                        <p class="text-sm text-stone-500 uppercase font-bold tracking-tighter">Soporte Técnico</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/573117700431" class="inline-block bg-stone-900 text-white px-12 py-5 rounded-full font-bold text-lg hover:shadow-2xl transition">COTIZAR PROYECTO WEB</a>
+            </div>
+            <div class="flex-1 relative">
+                <div class="bg-amber-900 absolute inset-0 -rotate-3 rounded-[3rem] opacity-10"></div>
+                <img src="https://images.unsplash.com/photo-1594911771120-d33a1e9c20a6?auto=format&fit=crop&q=80&w=800" class="relative z-10 rounded-[3rem] shadow-2xl rotate-2 grayscale hover:grayscale-0 transition duration-500" alt="Gestión equina">
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-stone-950 text-white pt-24 pb-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-2">
+                    <h4 class="text-4xl font-bold mb-6 italic tracking-tighter uppercase">Vibras Positivas <span class="text-amber-500">HM</span></h4>
+                    <p class="text-stone-400 max-w-sm mb-6 leading-relaxed">Expertos en extraer la esencia técnica del mundo equino para transformarla en herramientas digitales de alta precisión.</p>
+                    <p class="text-amber-500 font-bold uppercase text-xs tracking-widest italic">Basado en tarifas de Tintorillo Pro</p>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase text-xs tracking-widest text-stone-500 mb-6">Navegación</h5>
+                    <ul class="space-y-4 text-stone-300 font-semibold">
+                        <li><a href="#" class="hover:text-amber-500 transition">Inicio</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Enciclopedia</a></li>
+                        <li><a href="#" class="hover:text-amber-500 transition">Desarrollo Web</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase text-xs tracking-widest text-stone-500 mb-6">Contacto</h5>
+                    <ul class="space-y-4 text-stone-300 font-semibold">
+                        <li class="flex items-center gap-3">📍 Caucasia, Antioquia</li>
+                        <li class="flex items-center gap-3">📞 311 770 0431</li>
+                        <li class="flex items-center gap-3 text-amber-500">✉ haroldco45@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-stone-500 text-sm">© 2026 **Vibras Positivas HM**. Todos los derechos reservados.</p>
+                <div class="flex gap-6">
+                    <span class="text-[10px] text-stone-700 tracking-[0.3em] uppercase font-black italic">App desarrollada por Vibras Positivas HM (3117700431)</span>
+                </div>
             </div>
         </div>
     </footer>
