@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopedia Equina | VIBRAS POSITIVAS HM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2 { font-family: 'Playfair Display', serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534073131709-322d86161986?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+    <header class="bg-[#4a3728] text-white p-4 sticky top-0 z-50 shadow-2xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-1 rounded-full">
+                    <span class="text-[#4a3728] font-bold text-xs p-1">VP HM</span>
+                </div>
+                <h1 class="text-2xl font-bold tracking-widest">ENCICLOPEDIA EQUINA</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-semibold text-sm uppercase">
+                <a href="#" class="hover:text-amber-400 transition">Razas</a>
+                <a href="#" class="hover:text-amber-400 transition">Anatomía</a>
+                <a href="#" class="hover:text-amber-400 transition">Cuidados</a>
+                <a href="#" class="hover:text-amber-400 transition">Etología</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-bg h-[60vh] flex items-center justify-center text-white text-center px-4">
+        <div>
+            <h2 class="text-5xl md:text-7xl mb-6">Descubre el Mundo del Caballo</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8 font-light italic">"El aire del cielo es aquel que sopla entre las orejas de un caballo."</p>
+            <div class="max-w-xl mx-auto relative">
+                <input type="text" placeholder="Busca con lupa: razas, genética, medicina..." 
+                       class="w-full p-5 rounded-full border-none text-stone-800 shadow-2xl focus:ring-4 focus:ring-amber-600 outline-none">
+                <button class="absolute right-4 top-3 bg-amber-700 p-2 rounded-full hover:bg-amber-800 transition">
+                    🔍
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto py-16 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=2071&auto=format&fit=crop" alt="Genética" class="h-56 w-full object-cover">
+                <div class="p-6 border-t-8 border-amber-800">
+                    <h3 class="text-2xl font-bold mb-3 text-amber-900 leading-tight">Genética y Capas</h3>
+                    <p class="text-stone-600 mb-4 text-sm leading-relaxed">Estudio profundo sobre el ADN equino, genes de dilución y la clasificación técnica de pelajes según estándares internacionales.</p>
+                    <a href="#" class="text-amber-800 font-bold hover:underline italic">Ver más con lupa →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1598974357851-7274099f71c0?q=80&w=1974&auto=format&fit=crop" alt="Salud" class="h-56 w-full object-cover">
+                <div class="p-6 border-t-8 border-emerald-800">
+                    <h3 class="text-2xl font-bold mb-3 text-emerald-900 leading-tight">Salud Preventiva</h3>
+                    <p class="text-stone-600 mb-4 text-sm leading-relaxed">Podología avanzada, nutrición balanceada y planes sanitarios para mantener el rendimiento deportivo y el bienestar.</p>
+                    <a href="#" class="text-emerald-800 font-bold hover:underline italic">Ver más con lupa →</a>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl overflow-hidden shadow-xl hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1518467166778-b88f373ffec7?q=80&w=2000&auto=format&fit=crop" alt="Disciplinas" class="h-56 w-full object-cover">
+                <div class="p-6 border-t-8 border-stone-800">
+                    <h3 class="text-2xl font-bold mb-3 text-stone-900 leading-tight">Disciplinas y Aires</h3>
+                    <p class="text-stone-600 mb-4 text-sm leading-relaxed">Desde la biomecánica del Salto hasta la elegancia del Paso Fino. Técnicas de monta y comunicación etológica.</p>
+                    <a href="#" class="text-stone-900 font-bold hover:underline italic">Ver más con lupa →</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-stone-900 text-stone-400 py-12 mt-10 border-t-4 border-amber-800">
+        <div class="container mx-auto text-center px-4">
+            <p class="text-white text-lg mb-4 font-semibold tracking-widest">VIBRAS POSITIVAS HM</p>
+            <p class="text-sm max-w-md mx-auto mb-6">Líderes en desarrollo tecnológico para el sector agropecuario y ecuestre.</p>
+            <div class="border-t border-stone-800 pt-6">
+                <p class="text-xs uppercase tracking-widest italic">App desarrollada por **VIBRAS POSITIVAS HM**</p>
+                <p class="text-xs mt-2">Derechos de Autor © 2026 | Contacto: 3117700431</p>
+                <p class="text-[10px] mt-4 text-stone-600">Basado en tarifas de Tintorillo Pro</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
